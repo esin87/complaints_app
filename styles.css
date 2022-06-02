@@ -1,0 +1,94 @@
+/* Base & Utility Styles */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+button {
+    color: white;
+    background-color: darkred;
+    border-radius: 4px;
+    border: 1px solid gray;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+}
+
+/* Form */
+form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+input {
+    padding: 12px 7px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    margin: 0.25em;
+}
+
+form button {
+    background-color: darkblue;
+    color: white;
+    padding: 12px 7px;
+    white-space: nowrap;
+}
+
+form button:hover,
+button:hover {
+    background-color: goldenrod;
+    cursor: pointer;
+}
+
+input[type='number']:focus {
+    outline: none;
+    border: 1px solid goldenrod;
+}
+
+/* Results */
+.complaints-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 50%;
+    min-width: 500px;
+}
+
+li::before {
+    content: '🚨';
+}
+
+.complaints-list-item-button {
+    float: right;
+}
+
+.resolution { 
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+@media (min-width: 768px) {
+    form {
+        flex-direction: row;
+        align-items: center;
+    }
+}
